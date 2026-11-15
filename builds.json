@@ -1,0 +1,168 @@
+{
+  "title": "American Police Simulator Build Tracker",
+  "dataUpdated": "2026-11-15",
+  "countingNote": "Counts come from read-only Discord checks. Daily counting stopped Sat Nov 14 at 6:15 AM Phoenix time, when bug counting was paused for the rebuild. All times are Phoenix time (UTC-7).",
+  "attributionRules": [
+    "A report counts toward the build that was public when it was posted, unless the player named a different version.",
+    "0.1.3 was public from Mon Nov 9 (about 4-5 PM) until 0.1.52 arrived.",
+    "0.1.52 was tagged Thu Nov 12 at 11 PM and posted Fri Nov 13 at 11:05 AM; players got it through the itch.io launcher after that. Reports posted between those two times, with no version named, go in the 'build unknown' list.",
+    "Reports from testing before the public release (late October to early November) go in the 'build unknown' list.",
+    "An item that shows up in more than one report is counted once. A later report of the same problem on a newer build counts toward the newer build.",
+    "Anything we never measured says 'not measured'. No numbers are guessed."
+  ],
+  "builds": [
+    {
+      "id": "0.1.3",
+      "name": "Pre Alpha 0.1.3",
+      "status": "public",
+      "statusLabel": "Public (replaced)",
+      "releaseDate": "2026-11-09",
+      "releaseNote": "Went public on itch.io Mon Nov 9, about 4-5 PM. Replaced by 0.1.52 on Nov 13.",
+      "summary": "First public pre-alpha. Players loved the pursuits and realism, but many could not get into a shift because of crashes, mostly on Full graphics and AMD graphics cards.",
+      "metrics": {
+        "bugs": { "value": 46, "display": "46 different problems", "source": "44 of the 49 problems in APS-build-vs-reports-2026-11-12.md (Nov 12), leaving out 5 that came only from pre-release testing; plus 2 new ones in APS-report-2026-11-13.md (Nov 12 evening: a civilian stuck after being told to get off the road, a suspect's car catching fire). Includes crash types and download problems." },
+        "crashes": { "value": 45, "display": "At least 45 players (plus 8 unclear)", "source": "40 clear crash reporters in APS-crash-reporters-2026-11-10.md (Nov 10, about 5 PM), plus 5 new players in APS-report-2026-11-11.md and APS-report-2026-11-12.md (Nov 11-12). 8 more posts were unclear and are not counted." },
+        "crashFiles": { "value": 11, "display": "11 files from 8 computers", "source": "APS-crash-file-analysis-2026-11-12.md (Nov 12). Every file names Pre Alpha 0.1.3. All on Full graphics; 7 of 8 computers had AMD cards." },
+        "frameTimeMs": { "value": null, "display": "not measured", "source": "No lab test was labeled with this version. See the 'build unknown' list for lab numbers whose version was not named." },
+        "worstFreezeMs": { "value": null, "display": "not measured", "source": "No lab test was labeled with this version." },
+        "playerFps": { "display": "About 9 to 40 FPS on older or low-end PCs; about 40 FPS on one laptop", "source": "APS-sentiment-scan-2026-11-10.md and APS-full-report-2026-11-10.md (Nov 10). Player posts, not a controlled test." },
+        "sentiment": { "summary": "Excited and warm, with growing frustration about crashes and getting the game to start. Anger was aimed at hardware and access, not the team.", "positive": null, "negative": null, "neutral": null, "questions": null, "countsNote": "Mood was described, but posts were not counted (not measured).", "source": "APS-sentiment-scan-2026-11-10.md (Nov 10), APS-report-2026-11-11.md (Nov 11), APS-report-2026-11-12.md (Nov 12)." }
+      },
+      "added": [],
+      "solved": [],
+      "stillOpen": [
+        "Crashes or freezes while loading, at shift start ('Building the streets') or in the Academy, mostly on Full graphics",
+        "Lag, stutter and low frame rate on many PCs",
+        "Traffic hitting officers and not moving over on highway stops",
+        "Tow trucks spawning on cars or getting stuck",
+        "Building interiors gray or foggy from the doorway",
+        "Camera spinning when getting into a car",
+        "Calling an ambulance crashes the game",
+        "Spawning in a void or a blank world",
+        "Can't shoot through windows",
+        "Windows warning, download blocked in some countries, game closing on launch",
+        "No official Mac support"
+      ],
+      "notes": "This build was the starting point, so nothing is listed as solved here. Fixes arrived in 0.1.52."
+    },
+    {
+      "id": "0.1.52",
+      "name": "0.1.52",
+      "status": "public",
+      "statusLabel": "Public (current)",
+      "releaseDate": "2026-11-13",
+      "releaseNote": "Tagged Thu Nov 12, 11 PM. Posted in the updates channel Fri Nov 13, 11:05 AM. Players get it through the itch.io launcher.",
+      "summary": "A stability update. Players say crashes keep happening and some frame rates went way up. Counting covers only Nov 13, 11:05 AM to Nov 14, 6:15 AM (about 19 hours).",
+      "metrics": {
+        "bugs": { "value": 8, "display": "8 bug reports (not crashes)", "source": "6 new bug threads posted after 11:05 AM Nov 13 in APS-report-2026-11-14.md (Nov 14): officer following you after backup, backup officers merging, assist call with no call, driver ignoring 'follow me', people running in front of the cruiser, AI car turning badly. Plus 2 from the Nov 13-14 General check summary, Nov 14: the itch launcher removing one player's save data (one report), and AI cars treating traffic lights like stop signs." },
+        "crashes": { "value": 6, "display": "At least 6 players (up to 11 crash posts)", "source": "APS-report-2026-11-14.md (Nov 14): 4 crash threads (GTX 1060, still crashing after the update on an RX 580, Academy crash, crash halfway through startup), plus 2 more players named in the General check (crash at 80% after Launch Shift on an RX 6700 XT; 6:49 PM crash). 5 more General crash posts (11:36 AM, 12:24 PM, 4:17 PM, 12:09 AM, 12:41 AM) may be the same players, so they are not added." },
+        "crashFiles": { "value": 0, "display": "0 files", "source": "APS-report-2026-11-14.md (Nov 14): only screenshots, one video and one clip. Opt-in crash reports are new in this build, but no files reached Discord." },
+        "frameTimeMs": { "value": null, "display": "not measured (lab average was 'about the same as before')", "source": "APS-build-vs-reports-2026-11-12.md (Nov 12) gives no frame-time number for this build." },
+        "worstFreezeMs": { "value": 234, "display": "234 ms worst frame in a 10-minute drive, no crash or freeze", "source": "APS-build-vs-reports-2026-11-12.md (Nov 12), lab test of the build prepared that night. Same file: worst hitch in the first 30 seconds 0.17 s on first start, 0.07 s later; a 20-minute drive had a 281 ms worst frame." },
+        "playerFps": { "display": "One player: from about 5 FPS to a steady 44-60 FPS", "source": "APS-report-2026-11-14.md (Nov 14). One player post, not a controlled test." },
+        "sentiment": { "summary": "Mixed, leaning negative on stability. People like the new content, clips and that saves carried over; the main complaint is crashes.", "positive": 7, "negative": 12, "neutral": null, "questions": 25, "countsNote": "Two separate checks after the release, shown apart because their time windows may overlap: (1) about 15 negative, 5 positive, 4 neutral; (2) General from Fri 2:40 PM to Sat 3 AM: about 12 negative, 7 positive, 25 questions. The chart uses check 2.", "source": "Sentiment check done Nov 14 (summary only, no saved report file)." }
+      },
+      "added": [
+        "Controller and steering wheel support",
+        "Breakable windows",
+        "Opt-in crash reports",
+        "Auto-update through the itch.io launcher",
+        "Smaller police and ambulance textures (about 1.2 GB less graphics memory)",
+        "Less stutter when cars get dented; cheaper shadows on Low and Medium; far traffic costs less"
+      ],
+      "solved": [
+        "Police-light hard crash (4 of the 11 crash files)",
+        "Empty-picture error found in all 11 crash files",
+        "Crash when you get run over while cuffing someone",
+        "Call stuck after the suspect is booked",
+        "Can't talk to the passenger after arresting the driver",
+        "Highway cars spawning sideways",
+        "Dispatcher voice too calm",
+        "Unfair 'no valid reason' points loss on plate reader and radar stops",
+        "Points lost when taking over another unit's stop",
+        "Shot suspects getting up when cuffed"
+      ],
+      "solvedNote": "Solved according to the team's fix list and lab checks. Players have not confirmed these yet.",
+      "stillOpen": [
+        "Crashes in the Academy, at startup, after Launch Shift and on Full graphics (seen on GTX 1060, RX 580 and RX 6700 XT)",
+        "Backup officers following you after a call, or piling into each other",
+        "Drivers ignoring 'follow me' on traffic stops",
+        "Assist calls where the other officer stands alone with no call",
+        "AI cars treating traffic lights like stop signs; people running in front of the cruiser",
+        "Players also asked about: heavy driving feel, too few shootouts, suspects giving up too easily, instant deaths",
+        "Windows warning on the download and trouble unzipping it",
+        "No official Mac support (team said next week)"
+      ],
+      "notes": "Some fixes in this build were first made in repo version 0.1.41, which never reached players as far as the reports show."
+    },
+    {
+      "id": "rebuild",
+      "name": "From-scratch rebuild",
+      "status": "internal",
+      "statusLabel": "Internal / in development",
+      "releaseDate": null,
+      "startedDate": "2026-11-13",
+      "releaseNote": "Started Nov 13 from an empty folder. Not released to players.",
+      "summary": "A new game built from the ground up for smoothness. It has a city with traffic, people, saves, settings and a pause menu. Traffic stops, calls, arrests and the career are not built yet.",
+      "metrics": {
+        "bugs": { "value": null, "display": "not applicable (not released)", "source": "No players have it." },
+        "crashes": { "value": 0, "display": "0 in a 10-minute test drive", "source": "Rebuild comparison PDF (Nov 14): 10-minute drive steady, memory flat, 0 crashes. Not released, so no player reports." },
+        "crashFiles": { "value": null, "display": "not applicable (not released)", "source": "One key (F8) saves a full bug report in testing." },
+        "frameTimeMs": { "value": 20.5, "display": "20.5 ms a frame (about 49 FPS) with 3x traffic and real art", "source": "Rebuild comparison PDF (Nov 14), on the team's test laptop, full resolution. First test without the new art ran at 13.1 ms. About 1,050 cars and 300 people around the player." },
+        "worstFreezeMs": { "value": 250, "valuePrefix": "under", "display": "No freeze over the test's 250 ms limit", "source": "Rebuild comparison PDF (Nov 14). One 35 ms slip when a person appeared; fix in progress. Slowest 1 in 100 frames: not measured yet." },
+        "playerFps": { "display": "not measured (not released)", "source": "No players have it." },
+        "sentiment": { "summary": "not measured (not released)", "positive": null, "negative": null, "neutral": null, "questions": null, "source": "No players have it." }
+      },
+      "added": [
+        "City with traffic, people, saves, settings and a pause menu",
+        "Everything is made once at load and reused, so nothing is built while you play",
+        "The city is built once at load (no shift-start freeze)",
+        "Exactly repeatable test drives, so bugs are easy to pin down",
+        "F8 saves a full bug report"
+      ],
+      "solved": [
+        "Designed around the 9 root causes found in the public build: thread sharing, too much work in one frame, constant create-and-destroy, re-checking the same things every frame, no memory budget, half-finished actions, game facts stored in the wrong places, rare-input math errors, and crashes leaving no report"
+      ],
+      "solvedNote": "Measured on one laptop. Not yet tested on players' PCs.",
+      "stillOpen": [
+        "Not built yet: traffic stops, calls, pursuits, arrests, Academy",
+        "Not built yet: career and progress (designed)",
+        "Later: bigger map, garage and looks, more call types, online play, other languages",
+        "Not planned for now: Mac and phones"
+      ],
+      "notes": "The two games use different maps and crowds, so the speed comparison is not perfectly like-for-like."
+    }
+  ],
+  "unattributed": [
+    { "item": "Lab numbers for 'the public build' (version not named): 31-35 ms typical frame, 43-46 ms for the slowest 1 in 100 frames, worst freeze 137-868 ms, a 22-second freeze at shift start, a stutter every time a car or person appears (8 of 8 runs)", "when": "Measured Nov 11-13", "source": "Rebuild comparison PDF (Nov 14)", "why": "The version is not named, and the build was changing during those days.", "frameTimeRangeMs": [31, 35] },
+    { "item": "Lab numbers from before the 0.1.52 fixes: worst hitch in the first 30 seconds 0.34 s (first start) and 0.10 s (later); worst frame in a 20-minute drive 346 ms", "when": "Nov 12", "source": "APS-build-vs-reports-2026-11-12.md", "why": "Measured on a work-in-progress version that is not named." },
+    { "item": "Academy crash posted in General", "when": "Fri Nov 13, 6:59 AM", "source": "APS-report-2026-11-14.md", "why": "Posted between the 0.1.52 tag and its release post; no version named." },
+    { "item": "Radar and plate reader picking up cars far away or behind buildings", "when": "Fri Nov 13, 6:47 AM", "source": "APS-report-2026-11-14.md", "why": "Posted between the tag and the release post; no version named." },
+    { "item": "Gray block covering a door on a noise call", "when": "Fri Nov 13, 6:45 AM", "source": "APS-report-2026-11-14.md", "why": "Posted between the tag and the release post; no version named." },
+    { "item": "Backup officer keeps following the player after a call", "when": "Fri Nov 13, 4:26 AM", "source": "APS-report-2026-11-13.md", "why": "Posted between the tag and the release post. A later report of the same problem is counted for 0.1.52." },
+    { "item": "AI cars turning into your lane when you run lights and sirens (new reply in an older thread)", "when": "Fri Nov 13, 5:35 AM", "source": "APS-report-2026-11-13.md", "why": "Posted between the tag and the release post. The original thread is part of the 0.1.3 traffic problems." },
+    { "item": "Download size confusion and Windows 'malicious' warning (new reply in an older thread)", "when": "Fri Nov 13, 5:06 AM", "source": "APS-report-2026-11-13.md", "why": "Posted between the tag and the release post. The same problem is already counted for 0.1.3." },
+    { "item": "Full graphics crash on an RX 6700 XT in a support ticket", "when": "Date not recorded", "source": "Sentiment check summary (Nov 14)", "why": "The post date was not recorded. The same player reported a Full graphics crash on 0.1.3 on Nov 11." },
+    { "item": "5 problems from pre-release testing: 'pull them out of the car' flings the player, backup units using regular lanes, arrested suspect vanishing on E, broken rear right door, person won't leave the house", "when": "About Oct 31 - Nov 2", "source": "APS-build-vs-reports-2026-11-12.md (issues 31-35), APS-full-report-2026-11-10.md", "why": "Reported on tester builds before the public release; version not named." }
+  ],
+  "discord": {
+    "note": "Joins counted by scrolling the welcome channel, so they are close, not exact. They do not subtract people who left. The total member count was not checked.",
+    "source": "Welcome-channel recount summary (Nov 14 evening)",
+    "joinsPerDay": [
+      { "date": "2026-11-06", "joins": 39 },
+      { "date": "2026-11-07", "joins": 55 },
+      { "date": "2026-11-08", "joins": 51 },
+      { "date": "2026-11-09", "joins": 124, "approx": true, "event": "0.1.3 public" },
+      { "date": "2026-11-10", "joins": 59 },
+      { "date": "2026-11-11", "joins": 42 },
+      { "date": "2026-11-12", "joins": 59 },
+      { "date": "2026-11-13", "joins": 164, "event": "0.1.52 out" },
+      { "date": "2026-11-14", "joins": 134, "approx": true, "partial": true }
+    ],
+    "online": [
+      { "when": "Tue Nov 10", "count": 240, "approx": true, "source": "APS-sentiment-scan-2026-11-10.md" },
+      { "when": "Sat Nov 14, morning", "count": 344, "approx": true, "source": "Growth check summary (Nov 14)" },
+      { "when": "Sat Nov 14, evening", "count": 368, "approx": true, "source": "Growth recount summary (Nov 14; regular members, plus staff)" }
+    ]
+  }
+}

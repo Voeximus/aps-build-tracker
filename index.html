@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>American Police Simulator Build Tracker</title>
+<meta name="description" content="One card per American Police Simulator build: bugs, crashes, frame times, fixes and community mood.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="badge">APS</div>
+    <div>
+      <h1>American Police Simulator <span>Build Tracker</span></h1>
+      <p class="sub">One card per build: what players reported, how it ran, what got fixed, and what is still broken.</p>
+    </div>
+  </div>
+  <nav class="wrap tabs">
+    <a href="#builds">Builds</a><a href="#compare">Compare</a><a href="#unknown">Build unknown</a><a href="#growth">Discord growth</a><a href="#rules">How we count</a>
+  </nav>
+</header>
+<main class="wrap">
+  <p id="updated" class="muted"></p>
+  <section id="builds"><h2>Builds</h2><div id="cards" class="cards"></div></section>
+  <section id="compare"><h2>Compare builds</h2>
+    <div class="tablewrap"><table id="cmp"></table></div>
+    <div id="charts" class="charts"></div>
+  </section>
+  <section id="unknown"><h2>Build unknown</h2>
+    <p class="muted">These reports could not be tied to one build, so they are not counted in any build's totals.</p>
+    <ul id="unk" class="unk"></ul>
+  </section>
+  <section id="growth"><h2>Discord growth</h2><div id="growthbox"></div></section>
+  <section id="rules"><h2>How we count</h2><ul id="ruleslist"></ul>
+    <p class="muted">To add a build, add one entry to <code>builds.json</code>. See the README in this site's repository.</p>
+  </section>
+</main>
+<footer class="wrap muted">Information cards only. No game downloads here. Numbers marked "not measured" were never measured.</footer>
+<script src="app.js"></script>
+</body>
+</html>
