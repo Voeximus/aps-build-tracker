@@ -152,6 +152,16 @@
       <p class="muted">About ${total} joins from ${pts[0].label} to ${pts[pts.length - 1].label}. Before the public release the pace was about ${Math.round(before / 3)} a day. ${esc(d.note)} Source: ${esc(d.source)}.</p>`;
   }
 
+  function h2h(h) {
+    if (!h) return;
+    const fps = (ms) => Math.round(1000 / ms);
+    const rows = h.tests.map((x) => `<tr><td>${esc(x.name)}<br><small class="muted">${esc(x.crowd)}</small></td><td>${x.publicMs} ms (${fps(x.publicMs)} fps)</td><td>${x.newMs} ms (${fps(x.newMs)} fps)</td><td>${(x.publicMs / x.newMs).toFixed(1)}x</td></tr>` + x.rows.map((r) => `<tr class="sub"><td>&nbsp;&nbsp;${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td></td></tr>`).join("")).join("");
+    $("#h2hbox").innerHTML = `<h3>${esc(h.title)}</h3><p><b>${esc(h.headline)}</b></p><p class="muted">${esc(h.setup)}</p>
+      <div class="tablewrap"><table><thead><tr><th>Test (typical frame, lower ms is better)</th><th>Public 0.1.52</th><th>Rebuild</th><th>Frame rate gain</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="note"><b>${esc(h.stress.name)}.</b> ${esc(h.stress.note)}</p><p class="note">${esc(h.loading)}</p>
+      <h4>What is not equal yet</h4><ul>${h.caveats.map((c) => `<li>${esc(c)}</li>`).join("")}</ul><p class="muted">Source: ${esc(h.source)}</p>`;
+  }
+
   fetch("builds.json", { cache: "no-store" })
     .then((r) => r.json())
     .then((data) => {
@@ -162,6 +172,7 @@
       $("#unk").innerHTML = (data.unattributed || []).map((u) => `<li>${esc(u.item)}<small>${esc(u.when)} · ${esc(u.source)} · ${esc(u.why)}</small></li>`).join("");
       $("#ruleslist").innerHTML = (data.attributionRules || []).map((r) => `<li>${esc(r)}</li>`).join("");
       growth(data.discord);
+      h2h(data.headToHead);
     })
     .catch((e) => { $("#cards").innerHTML = `<p>Could not load builds.json (${esc(e.message)}). If you opened this file directly, run a small local web server instead.</p>`; });
 })();

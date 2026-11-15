@@ -49,3 +49,4 @@ td.nm{color:var(--muted);font-style:italic}
 footer{padding:30px 18px 40px}
 code{background:var(--panel2);padding:1px 6px;border-radius:6px}
 @media(max-width:520px){.stats{grid-template-columns:1fr}h1{font-size:1.1rem}}
+tr.sub td{font-size:.85em;color:#93a7c6;padding-top:2px;padding-bottom:2px}
